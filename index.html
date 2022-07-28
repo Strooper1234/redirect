@@ -11,8 +11,9 @@
   if (window.location.search == ""){
     window.location.href = "https://github.com/Strooper1234/redirect/";
   } else {
-    const queryString = window.location.search;
-    window.location.href = queryString.split("://")[0].substr(1) + "://" + queryString.split("://")[1];
+    const queryString = window.location;
+    const splitted = queryString.search.split("?");
+    window.location.href = splitted[1] + "?" +splitted[2];
     window.close();
   };
   </script>
